@@ -1,7 +1,22 @@
+:root {
+    /* Colors */
+    --bg1: #1f2937;
+    --bg2: #e5e7eb;
+    --bgtest: red;
+    --text1: #f9faf8;
+    --text2: #e5e7eb;
+    --button: #3882f6;
+
+    /* Misc */
+    --pad: 128px;
+    --pad2: 64px;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -10,19 +25,99 @@
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    
-    ul {
+    background-color: var(--bg1);
+    color: var(--text1);
+    font-size: 24px;
+
+    .container {
+
         display: flex;
-        list-style-type: none;
-        gap: 16px;
+        justify-content: space-between;
+        align-items: baseline;
+        
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 16px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--text1); 
+        }
+    }
+}
+
+.hero {
+    background-color: var(--bg1);
+    font-size: 48px;
+    
+    h1 {
+        color: var(--text1);
+        font-weight: 900;
     }
 
-    a {
-        text-decoration: none;
-        /* Definir variável para a cor a seguir */
-        color: black; 
+    p {
+        color: var(--text2);
+        font-size: 18px;
+    }
+
+    button {
+        background-color: var(--button);
+        padding: 8px 16px;
+        color: var(--text1);
+        border-radius: 8px;
+        border: none;
+    }
+
+    .container {
+        display: flex;
+        gap: 16px;
+        padding: var(--pad) 0;
+    }
+}
+
+.section {
+    padding: var(--pad2) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cards {
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        gap: var(--pad2);
+
+        .rec {
+            height: 200px;
+            border: 4px solid var(--button);
+            border-radius: 16px;
+        }
+
+        text-align: justify;
+    }
+}
+
+.section-quote {
+    background-color: var(--bg2);
+    padding: var(--pad) 0;
+
+    p {
+        width: 60%;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 300;
+        color: var(--bg1);
+    }
+
+    .author {
+        text-align: right;
+        font-weight: 900;
+        font-size: 22px;
+        font-style: normal;
     }
 }
