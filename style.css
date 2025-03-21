@@ -82,21 +82,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--bg1);
 
     .cards {
         margin-top: 64px;
         display: flex;
         justify-content: space-between;
-        width: 70%;
+        width: 50%;
         gap: var(--pad2);
 
-        .rec {
-            height: 200px;
-            border: 4px solid var(--button);
-            border-radius: 16px;
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            .rec {
+                height: 200px;
+                width: 200px;
+                border: 4px solid var(--button);
+                border-radius: 16px;
+            }
+
+            p {
+                text-align: center;
+            }
         }
 
-        text-align: justify;
     }
 }
 
@@ -112,6 +124,7 @@
         font-style: italic;
         font-weight: 300;
         color: var(--bg1);
+        width: 50%;
     }
 
     .author {
@@ -119,5 +132,27 @@
         font-weight: 900;
         font-size: 22px;
         font-style: normal;
+    }
+}
+
+.contact {
+    padding: var(--pad) 0;
+    color: var(--text1);
+
+    .container {
+        padding: var(--pad2);
+        background-color: var(--button);
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 300px;
+    }
+
+    button {
+        background-color: transparent;
+        border: 4px solid var(--bg2);
+        border-radius: 16px;
+        padding: 8px 32px;
+        color: var(--bg2);
     }
 }
