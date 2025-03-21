@@ -10,6 +10,7 @@
     /* Misc */
     --pad: 128px;
     --pad2: 64px;
+    --pad3: 32px
 }
 
 * {
@@ -155,4 +156,13 @@
         padding: 8px 32px;
         color: var(--bg2);
     }
+}
+
+footer {
+    background-color: var(--bg1);
+    padding: var(--pad3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg2);
 }
